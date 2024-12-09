@@ -3,30 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quantos Números São Maiores que 8</title>
+    <title>Tabuada de Multiplicação</title>
     <script>
-        function contarMaioresQueOito() {
-            let maiorQueOito = 0;
+        function exibirTabuada() {
+            let numero = parseInt(prompt("Digite um número para ver sua tabuada de multiplicação:"));
+            let resultado = "";
 
-            for (let i = 1; i <= 20; i++) {
-                let numero = parseInt(prompt(Digite o ${i}º número:));
-                
-              
-                if (numero > 8) {
-                    maiorQueOito++;
-                }
+         
+            for (let i = 1; i <= 10; i++) {
+                resultado += ${numero} x ${i} = ${numero * i}<br>;
             }
 
            
-            document.getElementById("resultado").innerHTML = Quantidade de números maiores que 8: ${maiorQueOito};
+            document.getElementById("tabuada").innerHTML = resultado;
         }
     </script>
 </head>
 <body>
-    <h1>Contar Números Maiores que 8</h1>
-    <button onclick="contarMaioresQueOito()">Iniciar Contagem</button>
+    <h1>Tabuada de Multiplicação</h1>
+    <p>Clique no botão abaixo para digitar um número e ver a sua tabuada.</p>
     
-    <p id="resultado"></p> 
-
+    <button onclick="exibirTabuada()">Ver Tabuada</button>
+    
+    <div id="tabuada"></div> 
 </body>
 </html>
